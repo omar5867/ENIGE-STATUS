@@ -10,7 +10,6 @@
 <ul>
   <li><strong>Arotaipe Suni, Nayeli Virginia:</strong> Desarrollador de software y Diseñador gráfico <a href="mailto:narotaipe@unsa.edu.pe">narotaipe@unsa.edu.pe</a></li>
   <li><strong>Gonzales Rodriguez, Ciolymar Johanna:</strong> Desarrollador de software y Diseñador gráfico <a href="mailto:cgonzalesro@unsa.edu.pe">cgonzalesro@unsa.edu.pe</a></li>
-  <li><strong>Humpire Cari, Juan José:</strong> Desarrollador de software y Diseñador gráfico <a href="mailto:jhumpire@unsa.edu.pe">jhumpire@unsa.edu.pe</a></li>
   <li><strong>Idme Cutipa, Ronaldiño Junior:</strong> Desarrollador de software y Diseñador gráfico <a href="mailto:ridmecu@unsa.edu.pe">ridmecu@unsa.edu.pe</a></li>
   <li><strong>Mamani Ccopa, Bryan Omar:</strong> Desarrollador de software y Diseñador gráfico <a href="mailto:bmamanicc@unsa.edu.pe">bmamanicc@unsa.edu.pe</a></li>
   <!-- Agrega más nombres según sea necesario -->
