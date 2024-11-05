@@ -83,14 +83,14 @@
         </div>
     </header>
 
-    <h1>Bienvenido</h1>
-    <h2>Explora el flujo térmico del entorno a través del tiempo con nuestro sistema de monitoreo.</h2>
-    <p>Descubre información detallada sobre los cambios de temperatura y humedad en diferentes ubicaciones
-        a lo largo del tiempo.<br>Nuestro avanzado sistema de monitoreo te proporciona datos precisos y
-        útiles para comprender mejor el entorno.</p>
+    <h1>Bienvenido usuario</h1>
+    <h2>Explora el monitoreo de los motores desde las diferentes nodos</h2>
+    <p>Descubre información detallada sobre los cambios de temperatura, corriente y vibracion en diferentes ubicaciones
+        a lo largo del tiempo de la sala de motores.<br>Nuestro avanzado sistema de monitoreo te proporciona datos precisos y
+        útiles para comprender mejor el estado de estos asi como prevenir posibles fallas.</p>
 
     <footer>
-        UNSA © Control de Valores de Temperatura y Humedad 2024
+        UNSA © Control de Valores de medicion de Motores 2024
     </footer>
 </body>
 </html>
