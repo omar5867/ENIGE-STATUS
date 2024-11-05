@@ -94,7 +94,7 @@ class ControlPuntos extends Controller
 
     public function editdata(string $id)
     {
-        $dato = Datos::findOrFail($id);
+        $dato = Datos::findOrFail(id: $id);
   
         return view('points.editdata', compact('dato','id'));
     }
