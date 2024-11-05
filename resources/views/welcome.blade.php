@@ -83,7 +83,7 @@
         </div>
     </header>
 
-    <h1>Bienvenido usuario Junior</h1>
+    <h1>Bienvenido usuario</h1>
     <h2>Explora el monitoreo de los motores desde las diferentes nodos</h2>
     <p>Descubre información detallada sobre los cambios de temperatura, corriente y vibracion en diferentes ubicaciones
         a lo largo del tiempo de la sala de motores.<br>Nuestro avanzado sistema de monitoreo te proporciona datos precisos y
