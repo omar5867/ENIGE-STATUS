@@ -16,7 +16,7 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background: url('admin_assets/img/BGM_home.png') no-repeat center center fixed;
+            background: url('admin_assets/img/creditos.png') no-repeat center center fixed;
             background-size: cover;
         }
 
