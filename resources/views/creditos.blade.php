@@ -68,13 +68,13 @@
           <div class="list-group shadow-lg rounded">
             <!-- Lista de personas en créditos -->
             <div class="list-group-item py-3">
-              <strong>Junior Evert Cabana Taco:</strong> Coordinador general y analista de sistemas <a href="mailto:jecabanat@unsa.edu.pe" class="contact-link">jecabanat@unsa.edu.pe</a>
+              <strong>Junior Evert Cabana Taco:</strong> Coordinador general y analista de sistemas <a href="mailto:jcabanat@unsa.edu.pe" class="contact-link">jecabanat@unsa.edu.pe</a>
             </div>
             <div class="list-group-item py-3">
-              <strong>Roy Huber Cabrera Flores:</strong> Desarrolladora de software y diseñador gráfico <a href="mailto:rhcabrera@unsa.edu.pe" class="contact-link">rhcabrera@unsa.edu.pe</a>
+              <strong>Roy Huber Cabrera Flores:</strong> Desarrolladora de software y diseñador gráfico <a href="mailto:rcabreraf@unsa.edu.pe" class="contact-link">rhcabrera@unsa.edu.pe</a>
             </div>
             <div class="list-group-item py-3">
-              <strong>Cynthia Nikolle Charca Torres:</strong> Desarrolladora de software y diseñadora gráfica <a href="mailto:cncharca@unsa.edu.pe" class="contact-link">cncharca@unsa.edu.pe</a>
+              <strong>Cynthia Nikolle Charca Torres:</strong> Desarrolladora de software y diseñadora gráfica <a href="mailto:ccharcat@unsa.edu.pe" class="contact-link">cncharca@unsa.edu.pe</a>
             </div>
             <div class="list-group-item py-3">
               <strong>Bryan Omar Mamani Ccopa:</strong> Coordinador general y analista de sistemas <a href="mailto:bomamani@unsa.edu.pe" class="contact-link">bomamani@unsa.edu.pe</a>
