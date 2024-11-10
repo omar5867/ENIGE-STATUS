@@ -14,8 +14,10 @@ return new class extends Migration
         Schema::create('datos', function (Blueprint $table) {
             $table->id();
             $table->string('punto');
+            $table->unsignedFloat('vibracion');
             $table->unsignedFloat('temperatura');
             $table->unsignedFloat('humedad');
+            $table->unsignedFloat('corriente');
             $table->timestamps();
         });
     }

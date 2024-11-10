@@ -124,13 +124,17 @@ class ControlPuntos extends Controller
 
     public function storedata(Request $request, string $idpunto)
     {
+        $v=$request->vibracion;
         $t=$request->temperatura;
         $h=$request->humedad;
+        $c=$request->corriente;
 
         $thm = new Datos;
         $thm->punto = $idpunto;
         $thm->temperatura = $t;
         $thm->humedad = $h;
+        $thm->vibracion = $v;
+        $thm->corriente = $c;
         $thm->save();
         return redirect()->route('puntos')->with('success', 'Dato añadido correctamente');
     }

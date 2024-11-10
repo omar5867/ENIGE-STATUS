@@ -11,7 +11,9 @@ class Datos extends Model
 
     protected $fillable = [
         'punto',
+        'vibracion'.
         'temperatura',
         'humedad',
+        'corriente'
     ];
 }
