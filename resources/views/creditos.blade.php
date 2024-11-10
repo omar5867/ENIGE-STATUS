@@ -6,37 +6,39 @@
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
       url('{{ asset("admin_assets/img/creditos.png") }}') no-repeat center center fixed;
     background-size: cover;
-    background-position: center;
-    min-height: 100vh; /* Hace que la sección ocupe toda la altura de la página */
-    padding: 5rem 2rem; /* Ajusta el padding para dar espacio interno */
-    width: 100%;
-    color: white; /* Asegura que el texto sea blanco y visible */
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    color: white;
   }
 
-  /* Estilo del título principal (aumentar tamaño y centrar) */
+  /* Estilo del título principal */
   .main-title {
-    font-size: 4rem; /* Tamaño más grande para el título */
-    font-weight: bold; /* Añadir peso al texto */
-    text-align: center; /* Centrado del texto */
-    color: #ffffff !important; /* Blanco fuerte */
+    font-size: 3rem; 
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
     text-transform: uppercase;
-    margin-bottom: 4rem; /* Espacio inferior */
+    margin: 1rem auto;
+    padding-top: 2rem;
+    line-height: 1.3;
+    max-width: 90%;
   }
 
   /* Estilo del texto de créditos y otros títulos */
   .section-title, .text-muted {
-    color: #ffffff !important; /* Blanco más fuerte */
+    color: #ffffff !important;
   }
 
   /* Estilo de los elementos de la lista de créditos */
   .list-group-item {
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con algo de transparencia */
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
     border: none;
   }
 
   .list-group-item a {
-    color: #ffc107; /* Color para los enlaces */
+    color: #ffc107;
     text-decoration: none;
   }
 
@@ -52,89 +54,77 @@
 </style>
 
 <div class="background-page">
-  <!-- Contenedor con fondo específico -->
-  <div class="container my-5 position-relative">
-    <!-- Título del Proyecto -->
-    <section class="text-center">
-      <h1 class="main-title">DISEÑO DE SISTEMAS SOFTWARE PARA MONITOREO DE TEMPERATURA Y HUMEDAD EN TIEMPO REAL CON IoT</h1>
-    </section>
+  <!-- Título del Proyecto, alineado al centro y separado del borde superior -->
+  <h1 class="main-title">DISEÑO DE UN SISTEMA DE MONITOREO UTILIZANDO TECNOLOGÍA LORA PARA GESTIONAR EL MANTENIMIENTO PREDICTIVO DE MOTORES ELÉCTRICOS DE UNA EMPRESA HOTELERA</h1>
 
-    <!-- Créditos Section -->
-    <section id="credits" class="text-center mb-5">
+  <!-- Créditos Section -->
+  <section id="credits" class="text-center my-5">
+    <div class="container">
       <div class="row">
         <div class="col-lg-10 mx-auto">
           <h1 class="section-title mb-4 text-uppercase">Créditos</h1>
-          <p class="text-muted mb-4">Este proyecto fue desarrollado como parte del diseño de sistemas software para monitoreo de temperatura y humedad en tiempo real con IoT. Agradecemos a las siguientes personas por su contribución:</p>
+          <p class="text-muted mb-4">Este proyecto fue desarrollado como parte del diseño de sistemas de monitoreo. Agradecemos a las siguientes personas por su contribución:</p>
           
           <div class="list-group shadow-lg rounded">
+            <!-- Lista de personas en créditos -->
             <div class="list-group-item py-3">
-              <strong>Arotaipe Suni, Nayeli Virginia:</strong> Desarrollador de software y Diseñador gráfico 
-              <a href="mailto:narotaipe@unsa.edu.pe" class="contact-link">narotaipe@unsa.edu.pe</a>
+              <strong>Junior Evert Cabana Taco:</strong> Coordinador general y analista de sistemas <a href="mailto:jecabanat@unsa.edu.pe" class="contact-link">jecabanat@unsa.edu.pe</a>
             </div>
             <div class="list-group-item py-3">
-              <strong>Gonzales Rodriguez, Ciolymar Johanna:</strong> Desarrollador de software y Diseñador gráfico 
-              <a href="mailto:cgonzalesro@unsa.edu.pe" class="contact-link">cgonzalesro@unsa.edu.pe</a>
+              <strong>Roy Huber Cabrera Flores:</strong> Desarrolladora de software y diseñador gráfico <a href="mailto:rhcabrera@unsa.edu.pe" class="contact-link">rhcabrera@unsa.edu.pe</a>
             </div>
             <div class="list-group-item py-3">
-              <strong>Idme Cutipa, Ronaldiño Junior:</strong> Desarrollador de software y Diseñador gráfico 
-              <a href="mailto:ridmecu@unsa.edu.pe" class="contact-link">ridmecu@unsa.edu.pe</a>
+              <strong>Cynthia Nikolle Charca Torres:</strong> Desarrolladora de software y diseñadora gráfica <a href="mailto:cncharca@unsa.edu.pe" class="contact-link">cncharca@unsa.edu.pe</a>
             </div>
             <div class="list-group-item py-3">
-              <strong>Mamani Ccopa, Bryan Omar:</strong> Desarrollador de software y Diseñador gráfico 
-              <a href="mailto:bmamanicc@unsa.edu.pe" class="contact-link">bmamanicc@unsa.edu.pe</a>
+              <strong>Bryan Omar Mamani Ccopa:</strong> Coordinador general y analista de sistemas <a href="mailto:bomamani@unsa.edu.pe" class="contact-link">bomamani@unsa.edu.pe</a>
             </div>
             <div class="list-group-item py-3">
-              <strong>Cabana Taco, Junior Evert:</strong> Desarrollador de software y Diseñador gráfico 
-              <a href="mailto:bmamanicc@unsa.edu.pe" class="contact-link">bmamanicc@unsa.edu.pe</a>
-            </div>
-            <div class="list-group-item py-3">
-              <strong>Cabrera Flores, Roy Huber:</strong> Desarrollador de software y Diseñador gráfico 
-              <a href="mailto:bmamanicc@unsa.edu.pe" class="contact-link">bmamanicc@unsa.edu.pe</a>
-            </div>
-            <div class="list-group-item py-3">
-              <strong>Charca Torres, Cynthia Nikolle:</strong> Desarrollador de software y Diseñador gráfico 
-              <a href="mailto:bmamanicc@unsa.edu.pe" class="contact-link">bmamanicc@unsa.edu.pe</a>
+              <strong>Ronal Edward Palaco Pequeña:</strong> Desarrolladora de software y diseñadora gráfica <a href="mailto:repalaco@unsa.edu.pe" class="contact-link">repalaco@unsa.edu.pe</a>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 
-  <!-- Divider with Custom Style -->
+  <!-- Divider -->
   <hr class="my-5 divider" />
 
   <!-- Agradecimientos Section -->
   <section id="acknowledgments" class="text-center mb-5">
-    <div class="row">
-      <div class="col-lg-10 mx-auto">
-        <h1 class="section-title mb-4 text-uppercase">Agradecimientos</h1>
-        <p class="text-muted mb-4">Agradecemos a todas las personas que han contribuido al proyecto de diversas maneras. Su apoyo y dedicación han sido fundamentales para el éxito del proyecto.</p>
-        <p>También queremos expresar nuestro agradecimiento especial al Ingeniero:</p>
-        
-        <div class="list-group shadow-lg rounded">
-          <div class="list-group-item py-3">
-            <strong>JORGE EUSEBIO RENDULICH TALAVERA:</strong> Por su orientación, apoyo y valiosas sugerencias que contribuyeron significativamente al desarrollo y la calidad de este proyecto.
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 mx-auto">
+          <h1 class="section-title mb-4 text-uppercase">Agradecimientos</h1>
+          <p class="text-muted mb-4">Agradecemos a todas las personas que han contribuido al proyecto de diversas maneras. Su apoyo y dedicación han sido fundamentales para el éxito del proyecto.</p>
+          <p>También queremos expresar nuestro agradecimiento especial al Ingeniero:</p>
+          
+          <div class="list-group shadow-lg rounded">
+            <div class="list-group-item py-3">
+              <strong>JORGE EUSEBIO RENDULICH TALAVERA:</strong> Por su orientación, apoyo y valiosas sugerencias que contribuyeron significativamente al desarrollo y la calidad de este proyecto.
+            </div>
           </div>
-        </div>
 
-        <p class="mt-4">Si tienes alguna pregunta o comentario sobre este proyecto, no dudes en ponerte en contacto con nosotros.</p>
-        <p>Correo electrónico: <a href="mailto:TemyHum@unsa.edu.pe" class="contact-link">TemyHum@unsa.edu.pe</a></p>
+          <p class="mt-4">Si tienes alguna pregunta o comentario sobre este proyecto, no dudes en ponerte en contacto con nosotros.</p>
+          <p>Correo electrónico: <a href="mailto:TemyHum@unsa.edu.pe" class="contact-link">TemyHum@unsa.edu.pe</a></p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Logo Section -->
   <section class="text-center">
-    <div class="row justify-content-center">
-      <div class="col-md-6 col-lg-4">
-        <img src="{{ asset('admin_assets/img/logunsa.png') }}" alt="Logo UNSA" class="img-fluid logo-img shadow-lg rounded">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <img src="{{ asset('admin_assets/img/logunsa.png') }}" alt="Logo UNSA" class="img-fluid logo-img shadow-lg rounded">
+        </div>
       </div>
     </div>
   </section>
 </div>
 @endsection
-
 
 
 
