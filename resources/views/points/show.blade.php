@@ -15,8 +15,10 @@
         <thead class="table-primary">
             <tr>
                 <th>#</th>
+                <th>Vibración</th>
                 <th>Temperatura</th>
                 <th>Humedad</th>
+                <th>Corriente</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -25,8 +27,10 @@
                 @foreach($data as $rs)
                     <tr>
                         <td class="align-middle">{{ $loop->iteration }}</td>
+                        <td class="align-middle">{{ $rs->vibracion }}</td>
                         <td class="align-middle">{{ $rs->temperatura }}</td>
                         <td class="align-middle">{{ $rs->humedad }}</td>
+                        <td class="align-middle">{{ $rs->corriente }}</td>
                         <td class="align-middle">
                             <div class="btn-group" role="group" aria-label="Basic example">
                                 <a href="{{ route('puntos.editdata', $rs->id)}}" type="button" class="btn btn-warning">Edit</a>

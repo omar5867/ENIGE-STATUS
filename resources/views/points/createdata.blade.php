@@ -9,10 +9,16 @@
         @csrf
         <div class="row mb-3">
             <div class="col">
-                <input type="text" name="temperatura" class="form-control" placeholder="Tempreatura">
+                <input type="text" name="vibracion" class="form-control" placeholder="Vibración">
+            </div>
+            <div class="col">
+                <input type="text" name="temperatura" class="form-control" placeholder="Temperatura">
             </div>
             <div class="col">
                 <input type="text" name="humedad" class="form-control" placeholder="Humedad">
+            </div>
+            <div class="col">
+                <input type="text" name="corriente" class="form-control" placeholder="Corriente">
             </div>
         </div>
  

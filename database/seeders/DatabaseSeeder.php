@@ -21,15 +21,17 @@ class DatabaseSeeder extends Seeder
         // ]);
         DB::table("puntos")->insert([
             'ubicacion'=>'seeder',
-            'descripcion'=>'Introducdo con el seeder',
+            'descripcion'=>'Introducido con el seeder',
             'estado'=>'activo',
             'created_at'=>now(),
             'updated_at'=>now()
         ]);
         DB::table("datos")->insert([
             'punto'=>'seeder',
+            'vibracion'=> 0,
             'temperatura'=> 0,
             'humedad'=> 0,
+            'corriente'=> 0,
             ]);
     }
 }

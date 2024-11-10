@@ -10,12 +10,20 @@
         @method('PUT')
         <div class="row">
             <div class="col mb-3">
+                <label class="form-label">Vibracion</label>
+                <input type="text" name="vibracion" class="form-control" placeholder="Vibracion" value="{{ $dato->vibracion }}" >
+            </div>
+            <div class="col mb-3">
                 <label class="form-label">Temperatura</label>
                 <input type="text" name="temperatura" class="form-control" placeholder="Temperatura" value="{{ $dato->temperatura }}" >
             </div>
             <div class="col mb-3">
                 <label class="form-label">Humedad</label>
                 <input type="text" name="humedad" class="form-control" placeholder="Humedad" value="{{ $dato->humedad }}" >
+            </div>
+            <div class="col mb-3">
+                <label class="form-label">Corriente</label>
+                <input type="text" name="corriente" class="form-control" placeholder="Corriente" value="{{ $dato->corriente }}" >
             </div>
         </div>
         <div class="row">
