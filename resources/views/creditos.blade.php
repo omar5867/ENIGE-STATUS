@@ -97,12 +97,12 @@
       <div class="row">
         <div class="col-lg-10 mx-auto">
           <h1 class="section-title mb-4 text-uppercase">Agradecimientos</h1>
-          <p class="text-muted mb-4">Agradecemos a todas las personas que han contribuido al proyecto de diversas maneras. Su apoyo y dedicación han sido fundamentales para el éxito del proyecto.</p>
-          <p>También queremos expresar nuestro agradecimiento especial al Ingeniero:</p>
+          <p class="text-muted mb-4">Agradecemos sinceramente a todas las personas que han contribuido de diversas maneras a este proyecto. Su apoyo y dedicación han sido elementos esenciales para alcanzar los objetivos propuestos y asegurar el éxito de esta iniciativa. Reconocemos que su colaboración ha sido invaluable y ha permitido que este proyecto se desarrolle con el más alto nivel de calidad y compromiso.</p>
+          <p>Asimismo, queremos expresar nuestro más profundo agradecimiento al Ingeniero, quien nos ha guiado con su experiencia y conocimiento desde el inicio del proyecto. Su orientación, apoyo constante y compromiso han sido fundamentales para el desarrollo exitoso de esta iniciativa:</p>
           
           <div class="list-group shadow-lg rounded">
             <div class="list-group-item py-3">
-              <strong>JORGE EUSEBIO RENDULICH TALAVERA:</strong> Por su orientación, apoyo y valiosas sugerencias que contribuyeron significativamente al desarrollo y la calidad de este proyecto.
+              <strong>JORGE EUSEBIO RENDULICH TALAVERA:</strong> 
             </div>
           </div>
 
