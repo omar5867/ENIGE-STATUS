@@ -3,7 +3,7 @@
 <style>
   /* Estilos para el fondo de toda la página */
   .background-page {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
       url('{{ asset("admin_assets/img/creditos.png") }}') no-repeat center center fixed;
     background-size: cover;
     min-height: 100vh;
@@ -14,7 +14,7 @@
 
   /* Estilo del título principal */
   .main-title {
-    font-size: 3rem; 
+    font-size: 3rem;
     font-weight: bold;
     text-align: center;
     color: #ffffff;
@@ -64,7 +64,7 @@
         <div class="col-lg-10 mx-auto">
           <h1 class="section-title mb-4 text-uppercase">Créditos</h1>
           <p class="text-muted mb-4">Este proyecto fue desarrollado como parte del diseño de sistemas de monitoreo. Agradecemos a las siguientes personas por su contribución:</p>
-          
+
           <div class="list-group shadow-lg rounded">
             <!-- Lista de personas en créditos -->
             <div class="list-group-item py-3">
@@ -77,10 +77,10 @@
               <strong>Cynthia Nikolle Charca Torres:</strong> Desarrolladora de software y diseñadora gráfica <a href="mailto:ccharcat@unsa.edu.pe" class="contact-link">ccharcat@unsa.edu.pe</a>
             </div>
             <div class="list-group-item py-3">
-              <strong>Bryan Omar Mamani Ccopa:</strong> Coordinador general y analista de sistemas <a href="mailto:bomamani@unsa.edu.pe" class="contact-link">omamamic@unsa.edu.pe</a>
+              <strong>Bryan Omar Mamani Ccopa:</strong> Coordinador general y analista de sistemas <a href="mailto:bomamani@unsa.edu.pe" class="contact-link">bmamamicc@unsa.edu.pe</a>
             </div>
             <div class="list-group-item py-3">
-              <strong>Ronal Edward Palaco Pequeña:</strong> Desarrolladora de software y diseñadora gráfica <a href="mailto:repalaco@unsa.edu.pe" class="contact-link">repalaco@unsa.edu.pe</a>
+              <strong>Ronal Edward Palaco Pequeña:</strong> Desarrolladora de software y diseñadora gráfica <a href="mailto:repalaco@unsa.edu.pe" class="contact-link">rpalacop@unsa.edu.pe</a>
             </div>
           </div>
         </div>
@@ -99,10 +99,10 @@
           <h1 class="section-title mb-4 text-uppercase">Agradecimientos</h1>
           <p class="text-muted mb-4">Agradecemos sinceramente a todas las personas que han contribuido de diversas maneras a este proyecto. Su apoyo y dedicación han sido elementos esenciales para alcanzar los objetivos propuestos y asegurar el éxito de esta iniciativa. Reconocemos que su colaboración ha sido invaluable y ha permitido que este proyecto se desarrolle con el más alto nivel de calidad y compromiso.</p>
           <p>Asimismo, queremos expresar nuestro más profundo agradecimiento al Ingeniero, quien nos ha guiado con su experiencia y conocimiento desde el inicio del proyecto. Su orientación, apoyo constante y compromiso han sido fundamentales para el desarrollo exitoso de esta iniciativa:</p>
-          
+
           <div class="list-group shadow-lg rounded">
             <div class="list-group-item py-3">
-              <strong>JORGE EUSEBIO RENDULICH TALAVERA</strong> 
+              <strong>JORGE EUSEBIO RENDULICH TALAVERA</strong>
             </div>
           </div>
 
