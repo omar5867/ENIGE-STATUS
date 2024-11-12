@@ -148,7 +148,7 @@
                         const myAreaChart = new Chart(ctxArea, {
                             type: 'line',
                             data: {
-                                labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio'],
+                                labels: ['Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre'],
                                 datasets: [{
                                     label: 'Temperatura (°C)',
                                     data: Array.from({length: 7}, () => Math.floor(Math.random() * 35) + 5), // Datos aleatorios entre 5 y 40°C
@@ -168,39 +168,60 @@
                             }
                         });
 
-                        // Gráfico de pastel (Humedad)
                         const ctxPie = document.getElementById('myPieChart').getContext('2d');
-                        const myPieChart = new Chart(ctxPie, {
-                            type: 'pie',
-                            data: {
-                                labels: ['Alta Humedad', 'Media Humedad', 'Baja Humedad'],
-                                datasets: [{
-                                    label: 'Humedad',
-                                    data: Array.from({length: 3}, () => Math.floor(Math.random() * 100)), // Datos aleatorios de porcentaje de humedad
-                                    backgroundColor: [
-                                        'rgba(75, 192, 192, 0.2)',
-                                        'rgba(255, 159, 64, 0.2)',
-                                        'rgba(255, 205, 86, 0.2)'
-                                    ],
-                                    borderColor: [
-                                        'rgba(75, 192, 192, 1)',
-                                        'rgba(255, 159, 64, 1)',
-                                        'rgba(255, 205, 86, 1)'
-                                    ],
-                                    borderWidth: 1
-                                }]
-                            },
-                            options: {
-                                responsive: true
-                            }
-                        });
+const myPieChart = new Chart(ctxPie, {
+    type: 'pie',
+    data: {
+        labels: ['Alta Humedad', 'Media Humedad', 'Baja Humedad'],
+        datasets: [{
+            label: 'Humedad',
+            data: Array.from({length: 3}, () => Math.floor(Math.random() * 100)),
+            backgroundColor: [
+                'rgba(75, 192, 192, 0.6)',
+                'rgba(255, 159, 64, 0.6)',
+                'rgba(255, 205, 86, 0.6)'
+            ],
+            borderColor: [
+                'rgba(75, 192, 192, 1)',
+                'rgba(255, 159, 64, 1)',
+                'rgba(255, 205, 86, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'right', // Mantiene la leyenda en la parte derecha
+                labels: {
+                    font: {
+                        size: 12 // Tamaño de fuente menor para evitar que se corte el texto
+                    },
+                    padding: 15, // Espaciado ajustado para mejorar la legibilidad
+                    boxWidth: 20 // Ajusta el tamaño del cuadro de color
+                }
+            }
+        },
+        layout: {
+            padding: {
+                left: 0,
+                right: 20, // Añade un margen derecho para más espacio en la leyenda
+            }
+        }
+    }
+});
+
+
+
+
 
                         // Gráfico de área (Temperatura)
                         const ctxAreaH = document.getElementById('myAreaChartH').getContext('2d');
                         const myAreaChartH = new Chart(ctxAreaH, {
                             type: 'line',
                             data: {
-                                labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio'],
+                                labels: ['Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre'],
                                 datasets: [{
                                     label: '(Hz)',
                                     data: Array.from({length: 7}, () => Math.floor(Math.random() * 35) + 5), // Datos aleatorios entre 5 y 40°C
@@ -257,7 +278,7 @@
                             const myCurrentChart = new Chart(ctxCurrent, {
                                 type: 'line',
                                 data: {
-                                    labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio'],
+                                    labels: ['Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre'],
                                     datasets: [{
                                         label: 'Corriente (A)',
                                         data: Array.from({length: 7}, () => Math.floor(Math.random() * 50) + 10), // Datos aleatorios entre 10 y 60 A
@@ -284,7 +305,7 @@
                                 data: {
                                     labels: ['Activo', 'En Espera', 'Inactivo'],
                                     datasets: [{
-                                        label: 'Estado del Motor',
+                                        label: '',
                                         data: Array.from({length: 3}, () => Math.floor(Math.random() * 100)), // Datos aleatorios para cada estado
                                         backgroundColor: [
                                             'rgba(255, 99, 132, 0.6)',
