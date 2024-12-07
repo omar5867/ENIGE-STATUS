@@ -31,19 +31,24 @@ class ControlPuntos extends Controller
     public function store(Request $request)
     {
         Puntos::create($request->all());
- 
+
         return redirect()->route('puntos')->with('success', 'Punto añadido correctamente');
     }
     public function add(Request $request)
     {
         $t=$request->t;
         $h=$request->h;
+        $v=$request->v;
+        $c=$request->c;
+
         $ubicación=$request->u;
 
         $thm = new Datos;
         $thm->punto = $ubicación;
         $thm->temperatura = $t;
         $thm->humedad = $h;
+        $thm->vibracion = $v;
+        $thm->corriente = $c;
         $thm->save();
         return 'great';
     }
@@ -64,7 +69,7 @@ class ControlPuntos extends Controller
     public function edit(string $id)
     {
         $punto = Puntos::findOrFail($id);
-  
+
         return view('points.edit', compact('punto'));
     }
 
@@ -74,9 +79,9 @@ class ControlPuntos extends Controller
     public function update(Request $request, string $id)
     {
         $punto = Puntos::findOrFail($id);
-  
+
         $punto->update($request->all());
-  
+
         return redirect()->route('puntos')->with('success', 'Punto editado correctamente');
     }
 
@@ -86,34 +91,34 @@ class ControlPuntos extends Controller
     public function destroy(string $id)
     {
         $punto = Puntos::findOrFail($id);
-  
+
         $punto->delete();
-  
+
         return redirect()->route('puntos')->with('success', 'Punto eliminado correctamente');
     }
 
     public function editdata(string $id)
     {
         $dato = Datos::findOrFail(id: $id);
-  
+
         return view('points.editdata', compact('dato','id'));
     }
 
     public function updatedata(Request $request, string $id)
     {
         $dato = Datos::findOrFail($id);
-  
+
         $dato->update($request->all());
-  
+
         return redirect()->route('puntos')->with('success', 'Dato editado correctamente');
     }
 
     public function destroydata(string $id)
     {
         $dato = Datos::findOrFail($id);
-  
+
         $dato->delete();
-  
+
         return redirect()->route('puntos')->with('success', 'Valor eliminado correctamente');
     }
 

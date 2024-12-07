@@ -4,7 +4,7 @@
 <!-- Sidebar - Brand -->
 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('dashboard') }}">
   <div class="sidebar-brand-icon">
-    <img src="{{ asset('admin_assets/img/MOTOR.png') }}" class="img-fluid" alt="" style="height: 80px; width: 400px;">
+    <img src="{{ asset('admin_assets/img/motor.png') }}" class="img-fluid" alt="" style="height: 80px; width: 400px;">
   </div>
 </a>
 
