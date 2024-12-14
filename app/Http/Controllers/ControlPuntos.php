@@ -51,20 +51,20 @@ class ControlPuntos extends Controller
     $thm->corriente = $c;
     $thm->save();
 
-    // Obtener los últimos 5 registros para la ubicación dada
+    // Obtener los últimos 2 registros para la ubicación dada
     $ultimosValores = Datos::where('punto', $ubicacion)
         ->orderBy('id', 'desc')
-        ->take(5)
+        ->take(2)
         ->get(['temperatura', 'humedad', 'vibracion', 'corriente']);
 
-    // Si hay menos de 5 registros, no calcular varianza
-    if ($ultimosValores->count() < 5) {
+    // Si hay menos de 2 registros, no calcular varianza
+    if ($ultimosValores->count() < 2) {
         return "great";
     }
 
     // Calcular la varianza para cada variable
     $variables = ['temperatura', 'humedad', 'vibracion', 'corriente'];
-    $umbral = 10; // Ajustar según sea necesario
+    $umbral = 0.0001; // Ajustar según sea necesario
 
     foreach ($variables as $variable) {
         $valores = $ultimosValores->pluck($variable);
@@ -77,11 +77,9 @@ class ControlPuntos extends Controller
         if ($varianza > $umbral) {
             // Cambiar el estado del punto a "Error"
             $punto = Puntos::where('ubicacion', $ubicacion)->first();
-            if ($punto) {
-                $punto->estado = "Error";
-                $punto->save();
-            }
 
+            $punto->estado = "Error";
+            $punto->save();
             return $ubicacion;
         }
     }
