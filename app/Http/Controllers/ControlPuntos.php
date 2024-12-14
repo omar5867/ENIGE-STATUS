@@ -76,7 +76,7 @@ class ControlPuntos extends Controller
         // Comprobar si la varianza excede el umbral
         if ($varianza > $umbral) {
             // Cambiar el estado del punto a "Error"
-            $punto = Puntos::where('ubicacion', $ubicacion)->first();
+            $punto = Puntos::where('id', $ubicacion)->first();
 
             $punto->estado = "Error";
             $punto->save();

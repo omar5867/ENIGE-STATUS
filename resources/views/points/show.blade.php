@@ -1,5 +1,5 @@
 @extends('layouts.app')
-  
+
 @section('contents')
     <div class="d-flex align-items-center justify-content-between">
         <h1 class="mb-0">Listado de datos del punto {{ $idpunto }}</h1>
@@ -19,6 +19,7 @@
                 <th>Temperatura</th>
                 <th>Humedad</th>
                 <th>Corriente</th>
+                <th>Fecha</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -31,6 +32,7 @@
                         <td class="align-middle">{{ $rs->temperatura }}</td>
                         <td class="align-middle">{{ $rs->humedad }}</td>
                         <td class="align-middle">{{ $rs->corriente }}</td>
+                        <td class="align-middle"> {{ $rs->created_at }} </td>
                         <td class="align-middle">
                             <div class="btn-group" role="group" aria-label="Basic example">
                                 <a href="{{ route('puntos.editdata', $rs->id)}}" type="button" class="btn btn-warning">Edit</a>
