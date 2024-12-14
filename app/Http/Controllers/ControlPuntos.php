@@ -35,45 +35,59 @@ class ControlPuntos extends Controller
         return redirect()->route('puntos')->with('success', 'Punto añadido correctamente');
     }
     public function add(Request $request)
-    {
-        $t=$request->t;
-        $h=$request->h;
-        $v=$request->v;
-        $c=$request->c;
+{
+    $t = $request->t;
+    $h = $request->h;
+    $v = $request->v;
+    $c = $request->c;
+    $ubicacion = $request->u;
 
-        $ubicación=$request->u;
+    // Guardar los datos en la base de datos
+    $thm = new Datos;
+    $thm->punto = $ubicacion;
+    $thm->temperatura = $t;
+    $thm->humedad = $h;
+    $thm->vibracion = $v;
+    $thm->corriente = $c;
+    $thm->save();
 
-        $thm = new Datos;
-        $thm->punto = $ubicación;
-        $thm->temperatura = $t;
-        $thm->humedad = $h;
-        $thm->vibracion = $v;
-        $thm->corriente = $c;
-        $thm->save();
+    // Obtener los últimos 5 registros para la ubicación dada
+    $ultimosValores = Datos::where('punto', $ubicacion)
+        ->orderBy('id', 'desc')
+        ->take(5)
+        ->get(['temperatura', 'humedad', 'vibracion', 'corriente']);
 
-        // Obtener los últimos 5 registros para la ubicación dada
-        $ultimosValores = Datos::where('punto', $ubicación)
-            ->orderBy('id', 'desc')
-            ->take(5)
-            ->pluck('temperatura'); // Cambiar por la columna deseada
-
-        // Si hay menos de 5 registros, no calcular varianza
-        if ($ultimosValores->count() < 5) {
-            return "Solo subiendo datos";
-        }
-
-        // Calcular la varianza
-        $media = $ultimosValores->average();
-        $varianza = $ultimosValores->reduce(function ($carry, $item) use ($media) {
-            return $carry + pow($item - $media, 2);
-        }, 0) / $ultimosValores->count();
-
-        // Umbral de varianza
-        $umbral = 10; // Ajustar según sea necesario
-
-        // Retornar 1 si la varianza supera el umbral, 0 en caso contrario
-        return response()->json($varianza > $umbral ? 1 : 0);
+    // Si hay menos de 5 registros, no calcular varianza
+    if ($ultimosValores->count() < 5) {
+        return "great";
     }
+
+    // Calcular la varianza para cada variable
+    $variables = ['temperatura', 'humedad', 'vibracion', 'corriente'];
+    $umbral = 10; // Ajustar según sea necesario
+
+    foreach ($variables as $variable) {
+        $valores = $ultimosValores->pluck($variable);
+        $media = $valores->average();
+        $varianza = $valores->reduce(function ($carry, $item) use ($media) {
+            return $carry + pow($item - $media, 2);
+        }, 0) / $valores->count();
+
+        // Comprobar si la varianza excede el umbral
+        if ($varianza > $umbral) {
+            // Cambiar el estado del punto a "Error"
+            $punto = Puntos::where('ubicacion', $ubicacion)->first();
+            if ($punto) {
+                $punto->estado = "Error";
+                $punto->save();
+            }
+
+            return $ubicacion;
+        }
+    }
+
+    return "great";
+}
 
     /**
      * Display the specified resource.
