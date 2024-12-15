@@ -4,7 +4,7 @@ use App\Http\Controllers\ControlPuntos;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Models\Datos;
-use App\Http\Controllers\ReportController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +16,7 @@ use App\Http\Controllers\ReportController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/reporte-descargar', [ReportController::class, 'downloadReport'])->name('reporte.descargar');
+
 Route::get('/', function () {
     return view('welcome');
 });
