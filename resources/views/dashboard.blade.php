@@ -13,7 +13,15 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                                 <h1 class="h3 mb-0 text-gray-500">MOTOR 1 : Últimos datos tomados</h1>
+                                <div class="container mt-4">
+                                    <h1>Reporte de Puntos y Datos</h1>
+                                    <p>Descarga el archivo CSV con los datos del reporte:</p>
 
+                                    <!-- Botón de descarga -->
+                                    <a href="{{ route('reporte.descargar') }}" class="btn btn-success">
+                                        <i class="fa fa-download"></i> Descargar Reporte
+                                    </a>
+                                </div>
                     </div>
                     <!-- Content Row -->
                     <div class="row">

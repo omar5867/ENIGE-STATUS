@@ -4,7 +4,7 @@ use App\Http\Controllers\ControlPuntos;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Models\Datos;
-
+use App\Http\Controllers\ReportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,7 +16,7 @@ use App\Models\Datos;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+Route::get('/reporte-descargar', [ReportController::class, 'downloadReport'])->name('reporte.descargar');
 Route::get('/', function () {
     return view('welcome');
 });
@@ -48,13 +48,13 @@ Route::controller(AuthController::class)->group(function () {
 Route::middleware('auth')->group(function () {
     Route::get('dashboard', function () {
         $data1 = Datos::where('punto', 1)->get();
-        
+
         $data2 = Datos::where('punto', 2)->get();
 
         return view('dashboard', compact('data1','data2'));
 
     })->name('dashboard');
- 
+
     Route::controller(ControlPuntos::class)->prefix('puntos')->group(function () {
         Route::get('', 'index')->name('puntos');
         Route::get('create', 'create')->name('puntos.create');
@@ -69,9 +69,9 @@ Route::middleware('auth')->group(function () {
         Route::delete('destroy/{id}', 'destroy')->name('puntos.destroy');
         Route::delete('destroydata/{id}', 'destroydata')->name('puntos.destroydata');
     });
- 
+
     Route::get('/profile', [App\Http\Controllers\AuthController::class, 'profile'])->name('profile');
 
-   
+
 });
 
