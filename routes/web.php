@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ControlPuntos;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AuthController;
 use App\Models\Datos;
 
@@ -61,7 +62,7 @@ Route::middleware('auth')->group(function () {
         Route::post('store', 'store')->name('puntos.store');
         Route::get('createdata/{idpunto}', 'createdata')->name('puntos.createdata');
         Route::post('storedata/{idpunto}', 'storedata')->name('puntos.storedata');
-        Route::get('show/{id}', 'show')->name('puntos.show');
+        Route::get('show/{id}', 'show1')->name('puntos.show');
         Route::get('edit/{id}', 'edit')->name('puntos.edit');
         Route::put('edit/{id}', 'update')->name('puntos.update');
         Route::get('editdata/{id}', 'editdata')->name('puntos.editdata');
@@ -71,7 +72,8 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::get('/profile', [App\Http\Controllers\AuthController::class, 'profile'])->name('profile');
-
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    
 
 });
 
