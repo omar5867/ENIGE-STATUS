@@ -64,7 +64,7 @@ class ControlPuntos extends Controller
 
     // Calcular la varianza para cada variable
     $variables = ['temperatura', 'humedad', 'vibracion', 'corriente'];
-    $umbral = 0.0001; // Ajustar según sea necesario
+    $umbral = 50; // Ajustar según sea necesario
 
     foreach ($variables as $variable) {
         $valores = $ultimosValores->pluck($variable);
