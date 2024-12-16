@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ControlPuntos;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AuthController;
 use App\Models\Datos;
 
@@ -48,20 +49,20 @@ Route::controller(AuthController::class)->group(function () {
 Route::middleware('auth')->group(function () {
     Route::get('dashboard', function () {
         $data1 = Datos::where('punto', 1)->get();
-        
+
         $data2 = Datos::where('punto', 2)->get();
 
         return view('dashboard', compact('data1','data2'));
 
     })->name('dashboard');
- 
+
     Route::controller(ControlPuntos::class)->prefix('puntos')->group(function () {
         Route::get('', 'index')->name('puntos');
         Route::get('create', 'create')->name('puntos.create');
         Route::post('store', 'store')->name('puntos.store');
         Route::get('createdata/{idpunto}', 'createdata')->name('puntos.createdata');
         Route::post('storedata/{idpunto}', 'storedata')->name('puntos.storedata');
-        Route::get('show/{id}', 'show')->name('puntos.show');
+        Route::get('show/{id}', 'show1')->name('puntos.show');
         Route::get('edit/{id}', 'edit')->name('puntos.edit');
         Route::put('edit/{id}', 'update')->name('puntos.update');
         Route::get('editdata/{id}', 'editdata')->name('puntos.editdata');
@@ -69,9 +70,10 @@ Route::middleware('auth')->group(function () {
         Route::delete('destroy/{id}', 'destroy')->name('puntos.destroy');
         Route::delete('destroydata/{id}', 'destroydata')->name('puntos.destroydata');
     });
- 
-    Route::get('/profile', [App\Http\Controllers\AuthController::class, 'profile'])->name('profile');
 
-   
+    Route::get('/profile', [App\Http\Controllers\AuthController::class, 'profile'])->name('profile');
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    
+
 });
 

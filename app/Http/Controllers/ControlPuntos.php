@@ -13,10 +13,18 @@ class ControlPuntos extends Controller
      */
     public function index()
     {
-        $punto = Puntos::orderBy('created_at')->get();
+        $punto = Puntos::orderBy('created_at')->paginate(10); // Cambiado de get() a paginate()
         return view('points.index', compact('punto'));
-    }
+     }
+     public function show1($idpunto)
+    {
+        // Obtener los datos del punto especificado y paginarlos
+        $data = Datos::where('punto', $idpunto)->orderBy('created_at')->paginate(5);
 
+        // Pasar los datos y el idpunto a la vista
+        return view('points.show', compact('data', 'idpunto'));
+    }
+    
     /**
      * Show the form for creating a new resource.
      */
@@ -177,4 +185,5 @@ class ControlPuntos extends Controller
         $thm->save();
         return redirect()->route('puntos')->with('success', 'Dato añadido correctamente');
     }
+
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AmbientTrack</title>
+    <title>ENGINE-TRACK</title>
     <style>
         /* Reset básico */
         * {
@@ -29,7 +29,7 @@
 
         /* Encabezado */
         header {
-            background-color: rgba(0, 0, 0, 0.8); 
+            background-color: rgba(0, 0, 0, 0.8);
             width: 100%;
             padding: 15px 20px;
             position: fixed;
@@ -197,7 +197,7 @@
         <section class="gallery">
             <img src="admin_assets/img/HOTEL.png" alt="Descripción de imagen 1" onclick="openModal(this)">
             <img src="admin_assets/img/MOTORHOTEL.png" alt="Descripción de imagen 2" onclick="openModal(this)">
-            
+
         </section>
     </main>
 

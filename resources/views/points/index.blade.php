@@ -49,4 +49,8 @@
             @endif
         </tbody>
     </table>
+    <!-- Enlaces de paginación -->
+    <div>
+        {!! $punto->onEachSide(1)->links('pagination::simple-bootstrap-4') !!}
+        </div>
 @endsection

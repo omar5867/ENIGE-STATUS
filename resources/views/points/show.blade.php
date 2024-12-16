@@ -52,4 +52,7 @@
             @endif
         </tbody>
     </table>
+    <div>
+    {!! $data->onEachSide(1)->links('pagination::simple-bootstrap-4') !!}
+    </div>
 @endsection
