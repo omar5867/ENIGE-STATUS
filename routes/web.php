@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AuthController;
 use App\Models\Datos;
-
+use App\Http\Controllers\ReportController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +17,7 @@ use App\Models\Datos;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
+Route::get('/reporte-descargar', [ReportController::class, 'downloadReport'])->name('reporte.descargar');
 Route::get('/', function () {
     return view('welcome');
 });
@@ -73,7 +73,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/profile', [App\Http\Controllers\AuthController::class, 'profile'])->name('profile');
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    
+
 
 });
 

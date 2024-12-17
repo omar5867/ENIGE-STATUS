@@ -12,9 +12,17 @@
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <!-- tamaño del texto -->
         <h1 class="h3 mb-0 text-gray-500 font-weight-bold">MOTOR 1: Últimos datos tomados</h1>
+        <div class="container mt-4 text-right">
+            <!--  tamaño del texto  -->
+            <h1 class="h3 mb-0 text-gray-500 font-weight-bold">Reporte de Puntos y Datos</h1>
+            <p>Descarga el archivo CSV con los datos del reporte:</p>
+            <!-- Botón de descarga -->
+            <a href="{{ route('reporte.descargar') }}" class="btn btn-success">
+                <i class="fa fa-download"></i> Descargar Reporte
+            </a>
+        </div>
     </div>
 
-    
     <!-- Content Row -->
     <div class="row">
 
@@ -110,7 +118,7 @@
                 </div>
             </div>
         </div>
-    
+
         <!-- Gráfico de Humedad -->
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
             <div class="card shadow mb-4">
@@ -125,7 +133,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Segunda fila para los gráficos restantes -->
     <div class="row">
         <!-- Gráfico de Vibración -->
@@ -141,7 +149,7 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Gráfico de Corriente -->
         <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
             <div class="card shadow mb-4">
@@ -156,7 +164,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Script para agregar gráficos con datos reales -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
@@ -204,7 +212,7 @@
 
         const ctxHumidity = document.getElementById('myHumidityChart').getContext('2d');
         const humedadesHistoricas = {!! json_encode($humedadesHistoricas) !!};
-        
+
         const myHumidityChart = new Chart(ctxHumidity, {
             type: 'line',
             data: {
@@ -241,7 +249,7 @@
             }
         }
     });
-    
+
         // Gráfico de Vibración
         const ctxAreaH = document.getElementById('myAreaChartH').getContext('2d');
         const vibracionesHistoricas = {!! json_encode($vibracionesHistoricas) !!};
@@ -286,7 +294,7 @@
         // Gráfico de Corriente
         const ctxCurrent = document.getElementById('myCurrentChart').getContext('2d');
         const corrientesHistoricas = {!! json_encode($corrientesHistoricas) !!};
-        
+
         const myCurrentChart = new Chart(ctxCurrent, {
             type: 'line',
             data: {

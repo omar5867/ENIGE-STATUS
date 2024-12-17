@@ -23,7 +23,7 @@
                 <th>Action</th>
             </tr>
         </thead>
-        <tbody>+
+        <tbody>
             @if($data->count() > 0)
                 @foreach($data as $rs)
                     <tr>

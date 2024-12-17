@@ -1,5 +1,5 @@
 @extends('layouts.app')
-  
+
 @section('contents')
     <div class="d-flex align-items-center justify-content-between">
         <h1 class="mb-0">Listado de Puntos</h1>
@@ -21,7 +21,7 @@
                 <th>Action</th>
             </tr>
         </thead>
-        <tbody>+
+        <tbody>
             @if($punto->count() > 0)
                 @foreach($punto as $rs)
                     <tr>
